@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery Project</title>
+   <style>
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+#wrapper
+{
+    height:100vh;
+    width:100vw;
+    overflow-x:hidden;/* right side mein scroll na kar sake*/
+    overflow-y:auto;/* vertically scroll ho sake isliye*/
+}
+.container
+{
+    height:100%;
+    max-width:600px;
+    margin:0 auto;/* isse container automatic center mein aa jaayega,*/
+    padding:20px;
+}
+.container h1{ /*ye btaata hai ki ye container class kaa h1 element hai*/
+    margin:20px 0;
+    text-align:center;
+    margin-bottom:20px;
+    font-size:3rem;
+}
+.gallery
+{
+    display:flex;
+    flex-wrap:wrap;/*ye nahi karne saari image ek horizontal line mein aa rahi thi ,ye karne webpage ko jab squeeze karenge to ye automatic next line mein shift ho jaayegi*/
+    justify-content:space-between;/*two images ke bich mein equal space rahe isliye*/
+}
+.card
+{
+  width:32%;/*isliye ek line mein three image aayenge total huaa 96% and 4% equal space dene ke liye*/
+  position:relative;
+  margin-bottom: 20px;
+  border-radius:10px;/*ye box ke chaaro corner kaa shape badalne ke liye hota hai*/
+  overflow:hidden;
+}
+.card img{
+    height:100%;
+    width:100%;
+    filter:grayscale(100%);
+    box-shadow:0 0 20px #333;
+    object-fit:cover;/* ye dene kii koi jarurat nahi hai*/
+}
+.card:hover{
+    transform:scale(1.03);/*image pe mouse jaane per ye image ko zoom effect daalta matlab image badaa dikhane lagta hai*/
+    transition:0.5s;/*ye time btaata hai ki ye kitne samay tak hoga*/
+    filter:drop-shadow(0 0 10px #333);
+
+}
+.card:hover img{
+    filter:grayscale(0%)
+}
+.card figcaption{
+    position:absolute;
+    bottom:0;
+    left:0;
+    padding:25px;
+    width:100%;
+    height:20%;
+    font-size:16px;
+    font-weight:500;
+    color:#fff;
+    opacity:0;/*ye kisi text yaa kisi bhi chij ko gayab kar deta hai*/
+    border-radius:0 0 10px 10x;
+    background:linear-gradient(0deg rgba(0,0,0,0.5) 0%, rgba(255,255,255,0)100%);
+    transition:0.3s;
+}
+.card:hover figcaption{
+    opacity: 1;
+    transform:scale(1.03);
+}
+
+
+
+   </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <marquee behavior="slide" scrollamount="40"> <u> <h1 >trophy in virat's captaincy</h1></u></marquee>
+            <div class="gallery">
+
+               
+                    <figure class="card">
+                        <img src="28.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+               
+                
+                    <figure class="card">
+                        <img src="30.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+                
+                
+                    <figure class="card">
+                        <img src="31.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+               
+               
+                    <figure class="card">
+                        <img src="32.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+               
+                
+                    <figure class="card">
+                        <img src="33.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+               
+                
+                    <figure class="card">
+                        <img src="35.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+               
+               
+                    <figure class="card">
+                        <img src="36.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+               
+               
+                    <figure class="card">
+                        <img src="31.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+                
+               
+                    <figure class="card">
+                        <img src="33.jpeg" alt="">
+                        <figcaption >trophy in virat's captaincy</figcaption>
+                      </figure>
+                      <br>
+                      <a href="index.html"><--Back to home page</a>
+                      <br>
+                      <a href="index5.html">NEXT FOLDER-></a>
+
+               
+            </div>
+          
+        </div>
+    </div>
+</body>
+</html>
